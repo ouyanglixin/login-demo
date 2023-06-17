@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="register/html; charset=UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/register.js"></script>
+    <style>
+        form {
+            color: #fff;
+        }
+
+        .inputs {
+            width: 280px;
+            height: 38px;
+            margin-left: 25px;
+            padding: 0 8px;
+            color: #fff;
+            outline: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background-color: rgba(34, 26, 63, .2);
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .middle {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+
+        .buttons {
+            width: 106px;
+            height: 42px;
+            margin: 3px;
+            margin: 0 20px;
+            color: #fff;
+            margin-top: 28px;
+
+        }
+
+        .box {
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="registerDiv">
+        <form id="form" method="post" style="width: 500px; height: 625px; position: relative; " action="./register"
+            class="flex tou column">
+            <h1>register</h1>
+            <div class="box">
+                <p>用户姓名:<input name="username" class="inputs" id="userNname" type="text" autofocus required><label
+                        id="name_trip"></label></p>
+
+                <p>用户密码:<input name="password" class="inputs" id="password" type="password" required><label
+                        id="password_trip"></label></p>
+
+                <p>确认密码:<input class="inputs" id="surePassword" type="password" required><label
+                        id="surePassword_trip"></label></p>
+
+                <p>
+                    用户类型:
+                    <select
+                        style="width: 100px; height: 30px; margin-left:19px ; color: #fff; background-color: rgba(34, 26, 63, .2);"
+                        class="tou" name="usertype" id="userType">
+                        <option value="0">请选择</option>
+                        <option value="1">普通类型</option>
+                        <option value="2">VIP类型</option>
+                    </select>
+                    <label id="type_trip"></label>
+                </p>
+
+                <div class="sexDiv">
+                    <span style="margin-right: 23px; margin-left: 10px;">用户性别:</span>
+                    <input style="margin: 0 10px;" class="userSex" name="gender" value="1" type="radio">男
+                    <input style="margin: 0 10px;" class="userSex" name="gender" value="2" type="radio">女
+                    <label id="sex_trip"></label>
+                </div>
+                <p>
+                    <span style="margin-right: 23px;">出生日期:</span>
+                    <input style="color: #fff; width: 115px; height: 28px;" class="tou" id="birthday" type="date"
+                        name="entrydate">
+                    <label id="birthday_trip"></label>
+                </p>
+
+
+                <p class="hobby">
+                    <span style="margin-right: 23px;">兴趣爱好:</span>
+                    <input style="color: #d8b7b9;;" class="middle" type="checkbox" name="hobby" value="read">阅读
+                    <input class="middle" type="checkbox" name="hobby" value="music">音乐
+                    <input class="middle" type="checkbox" name="hobby" value="sport">运动
+                    <label id="hobby_trip"></label>
+                </p>
+
+                <p>
+                    电子邮件:
+                    <input name="email" class="inputs" id="email" type="email" required>
+                    <label id="emil_trip"></label>
+                </p>
+
+
+                <p> 自我介绍:</p>
+                <div class="introduce">
+                    <textarea style="outline: none; color: #fff; height: 60px; margin-left: 107px; resize: none;"
+                        class="tou" name="introduce" cols="30" id="introduceText" required rows="10"></textarea>
+                    <label id="introduce_trip"></label>
+                </div>
+            </div>
+            <p>
+                <input id="commit" type="submit" class="buttons tou " value="提交">
+                <input type="reset" class="buttons tou" value="重置">
+                <a class="tou register" href="./index.html">登录</a>
+            </p>
+        </form>
+    </div>
+    <script>
+        document.querySelector("#commit").addEventListener("click", (e) => {
+            checkName();
+            checkPassword();
+            checkSex()
+            checkDate()
+            checkHobby()
+            checkEmail()
+            checkSelect()
+            checkSelect()
+            checkText()
+            if (nametype && passwordtype && sex_type && date_type && hobby_type && email_type && sex_type && text_type) {
+                // 全部合法数据 可以提交
+            } else {
+                // 非法数据 阻止提交
+                console.log("0");
+                e.preventDefault();
+            }
+        })
+    </script>
+</body>
+
+</html>

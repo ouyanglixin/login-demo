@@ -1,0 +1,7 @@
+com\example\logindemo2\pojo\Result.class
+com\example\logindemo2\controller\UserController.class
+com\example\logindemo2\Logindemo2Application.class
+com\example\logindemo2\mapper\UserMapper.class
+com\example\logindemo2\service\impl\UserServiceImpl.class
+com\example\logindemo2\pojo\User.class
+com\example\logindemo2\service\UserServic.class

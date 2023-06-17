@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/login.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        #form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            width: 450px;
+            height: 350px;
+        }
+        .button {
+            width: 106px;
+            height: 42px;
+            margin: 3px;
+            margin: 0 30px;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="loginDiv">
+        <form method="post" style="position: relative;;" action="./login" id="form" class="tou">
+            <h1 style="color: #f6e4d0;" class="flex1 flex">login</h1>
+            <div class="flex1 flex column">
+                <p class="flex1 flex">用户名:<input name="username" class="tou input" id="username" type="text" placeholder="请输入用户名"><label
+                        id="name_trip"></label></p>
+                <p class="flex1 flex">密&nbsp;&nbsp;&nbsp;码:<input name="password" class="tou input" id="password" type="password"
+                        placeholder="请输入密码"><label id="password_trip"></label></p>
+            </div>
+            <a href="./register.html" class="login">注册</a>
+            <div class="flex1 flex">
+                <input type="submit" class="button tou" onclick="login()" value="登陆">
+                <input type="reset" class="button tou" value="重置">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

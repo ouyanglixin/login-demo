@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bj2.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+.tou {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background-color: rgba(34, 26, 63, .2);
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.input {
+    width: 280px;
+    height: 40px;
+    margin-left: 25px;
+    padding: 0 8px;
+    color: #fff;
+    outline: none;
+}
+.login {
+    position: absolute;
+    right: 36px;
+    bottom: 89px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+.login:hover {
+    color: aqua;
+    transform: translateY(2px);
+}
+.register {
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    width: 104px;
+    height: 42px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-size: 14px;
+    margin: 0 20px;
+}
+.trip_error {
+    margin-left: 5px;
+    font-size: 10px;
+    color: #ad3232;
+}
+.trip_ok {
+    margin-left: 5px;
+    font-size: 10px;
+    color: #26b65a;
+}
